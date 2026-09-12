@@ -1,7 +1,6 @@
 from dotenv import load_dotenv
 from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
-from langchain_core.messages import SystemMessage, HumanMessage
-import os
+from langchain_core.prompts import ChatPromptTemplate
 
 load_dotenv()
 
@@ -11,8 +10,6 @@ llm = HuggingFaceEndpoint(
 
 model = ChatHuggingFace(llm=llm)
 
-
-from langchain_core.prompts import ChatPromptTemplate
 
 personality = input(
     "Choose a personality (happy, sad, angry, professional, sarcastic): "
