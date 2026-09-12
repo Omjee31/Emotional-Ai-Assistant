@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moodmate | Your conversational space</title>
+  <link rel="stylesheet" href="/static/styles.css?v=2">
+</head>
+<body>
+  <main class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">M</span><span>Moodmate</span></div>
+      <div class="sidebar-copy">
+        <p class="eyebrow">Your conversational space</p>
+        <h1>Say it how you feel it.</h1>
+        <p>Choose a tone, then let the conversation meet you there.</p>
+      </div>
+      <div class="status-row"><span class="status-dot"></span><span id="status-label">Local service ready</span></div>
+      <div class="sidebar-foot">Private by default<br><span>Built for thoughtful conversations</span></div>
+    </aside>
+
+    <section class="workspace">
+      <header class="topbar">
+        <div><p class="eyebrow">New conversation</p><h2>How are you feeling today?</h2></div>
+        <button class="new-chat" id="clear-button" type="button">New chat <span>+</span></button>
+      </header>
+
+      <div class="conversation" id="conversation">
+        <div class="welcome" id="welcome">
+          <div class="welcome-orb">M</div>
+          <h3>A little room to think.</h3>
+          <p>Pick a personality below and start anywhere. There is no perfect way to begin.</p>
+        </div>
+      </div>
+
+      <form class="composer" id="chat-form">
+        <div class="composer-inner">
+          <textarea id="message-input" rows="1" maxlength="8000" placeholder="What is on your mind?" aria-label="Message"></textarea>
+          <button class="send-button" type="submit" aria-label="Send message"><span>Send</span><b>-></b></button>
+        </div>
+        <div class="composer-meta"><span>Press Enter to send</span><span id="provider-label">Local demo mode</span></div>
+      </form>
+    </section>
+
+    <aside class="tone-panel">
+      <div class="panel-heading"><p class="eyebrow">Conversation tone</p><h3>Choose your mood</h3></div>
+      <div class="tone-list" id="tone-list"></div>
+      <div class="tip"><span class="tip-icon">i</span><p>Different tones change how Moodmate listens and responds. You can switch anytime.</p></div>
+    </aside>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
