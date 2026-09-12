@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: moodmate-ai
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: HUGGINGFACEHUB_API_TOKEN
+        sync: false
+      - key: HF_MODEL
+        value: deepseek-ai/DeepSeek-V4.1-Flash
